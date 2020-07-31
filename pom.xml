@@ -68,6 +68,36 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <!-- generateDirectory MANDATORY IN ${basedir}/src/main/resources TO AVOID SONARQUBE -->
+            <!-- 
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${basedir}/src/main/resources</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>path?wsdl</wsdl>
+                                    <serviceName>WSPackage</serviceName>
+                                </wsdlOption>                              
+                            </wsdlOptions>
+                            <includes>
+                                <include>*Service.wsdl</include>
+                            </includes>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>     
+            -->
       
         </plugins>
     </build>
